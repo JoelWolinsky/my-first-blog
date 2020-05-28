@@ -1,0 +1,19 @@
+
+
+.circular--portrait {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 50%;
+   /* border-color:#bfbfbf;
+    border-style: solid;*/
+    background-color: white;
+  }
+  
+  .circular--portrait img {
+    width: 100%;
+    height: auto;
+    margin-left: -4%;
+  }
