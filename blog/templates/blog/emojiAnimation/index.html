@@ -1,7 +1,9 @@
+{% load static %}
 <html>
     <head>
         <title>Anamoji Animation</title>
-        <link rel="stylesheet" href="anamoji.css">
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
 
     </head>
 
@@ -10,7 +12,7 @@
        
         <div class='menu' id="menu">
             <div class="circular--portrait">
-                <img id = "anamoji" src = "images/anamoji00055.png">
+                <img id = "anamoji" src = "{% static 'images/anamoji00055.png' %}">
             </div>
             <div class="name-container">
                 <h1>Joel Wolinsky</h1>
@@ -20,7 +22,7 @@
        
         
         <div class="sticky">
-            <img  id="desk" src="RenderEmoji2.png">
+            <img  id="desk" src="{% static 'images/RenderEmoji2.png' %}">
         </div>
 
         <div class='title-container'>
@@ -102,11 +104,9 @@
 
                     var pad = "00000";
                     var ab = pad.substring(0, 5 - a.length) + a;
-                    var c = "images/anamoji" + ab + ".png";
-
-                    document.getElementById('anamoji').src = c;
-                }
-
+                    var c = "anamoji" + ab + ".png";
+                    document.getElementById('anamoji').src = "{% static 'images/' %}"+c                }
+                    
                 else if (y<0 && x>0){
 
                     var angle = -Math.atan(y/x)/2;
@@ -116,10 +116,9 @@
 
                     var pad = "00000";
                     var ab = pad.substring(0, 5 - a.length) + a;
-                    var c = "images/anamoji" + ab + ".png";
+                    var c = "anamoji" + ab + ".png";
 
-                    document.getElementById('anamoji').src = c;
-                }
+                    document.getElementById('anamoji').src = "{% static 'images/' %}"+c                 }
 
                 else if (y<0 && x<0){
 
@@ -134,11 +133,9 @@
 
                     var pad = "00000";
                     var ab = pad.substring(0, 5 - a.length) + a;
-                    var c = "images/anamoji" + ab + ".png";
+                    var c = "anamoji" + ab + ".png";
 
-                    document.getElementById('anamoji').src = c;
-                }
-               
+                    document.getElementById('anamoji').src = "{% static 'images/' %}"+c }               
             }
             </script>
     </body>
