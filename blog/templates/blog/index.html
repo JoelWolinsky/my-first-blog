@@ -12,7 +12,7 @@
        
         <div class='menu' id="menu">
             <div class="circular--portrait">
-                <img id = "anamoji" src = "{% static 'images/anamoji00055.png' %}">
+                <img id = "anamoji" src = "{% static 'images/anamoji00055.jpeg' %}">
             </div>
             <div class="name-container">
                 <h1>Joel Wolinsky</h1>
@@ -104,7 +104,7 @@
 
                     var pad = "00000";
                     var ab = pad.substring(0, 5 - a.length) + a;
-                    var c = "anamoji" + ab + ".png";
+                    var c = "anamoji" + ab + ".jpeg";
                     document.getElementById('anamoji').src = "{% static 'images/' %}"+c                }
                     
                 else if (y<0 && x>0){
@@ -116,7 +116,7 @@
 
                     var pad = "00000";
                     var ab = pad.substring(0, 5 - a.length) + a;
-                    var c = "anamoji" + ab + ".png";
+                    var c = "anamoji" + ab + ".jpeg";
 
                     document.getElementById('anamoji').src = "{% static 'images/' %}"+c                 }
 
@@ -133,7 +133,7 @@
 
                     var pad = "00000";
                     var ab = pad.substring(0, 5 - a.length) + a;
-                    var c = "anamoji" + ab + ".png";
+                    var c = "anamoji" + ab + ".jpeg";
 
                     document.getElementById('anamoji').src = "{% static 'images/' %}"+c }               
             }
