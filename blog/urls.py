@@ -1,7 +1,6 @@
-from django.urls import path
+from django.urls import re_path
 from . import views
 
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('post/<int:pk>/', views.post_detail, name='post_detail'),
+    re_path(r'^$', views.index, name='home')
 ]
