@@ -5,7 +5,7 @@ from django.shortcuts import render, get_object_or_404
 # Create your views here.
 
 
-def home(request):
+def index(request):
     return render(request, 'blog/emojiAnimation/index.html')
 
 def post_list(request):
