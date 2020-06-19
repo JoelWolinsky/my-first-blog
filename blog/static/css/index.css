@@ -1,0 +1,162 @@
+
+body{
+  background-color: #f3f3f3;
+}
+.circular--portrait {
+    position: relative;
+    width: 4vw;
+    height: 4vw;
+    overflow: hidden;
+    border-radius: 50%;
+   /* border-color:#bfbfbf;
+    border-style: solid;*/
+    background-color: white;
+    margin-left:3%;
+    float:left;
+    margin-top:-.5vw;
+    
+  }
+  
+  .circular--portrait img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    margin-left: -4%;
+  }
+  .anamoji{
+    top:0;
+    left:0;
+    z-index:0;
+  }
+
+  .menu{
+    position: fixed;
+    top:30px;
+    width:100%; 
+    height:4vw;
+    opacity: 0;
+    user-select: none;
+  }
+  .name-container{
+    margin-left:1vw;
+    width:10%;
+    float:left;
+
+  }
+
+  .menu-options{
+    position: relative;
+    margin-left:35%;
+    width:70%;
+  }
+
+  .menu-option{
+    position: relative;
+    margin-left:3vw;
+    float: left;
+    width: auto;
+    
+  }
+
+  .option-underline{
+    display: block;
+    height:0.1vw;
+    width:0;
+    margin-top:-0.7vw;
+    background-color: black;
+    z-index:10;
+  }
+  p{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-size: 20vw; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 600; 
+    line-height: 53.9px;
+    color: white;
+    
+  
+  }
+  h1{
+    font-size: 1.2vw;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 400;
+    color:black;
+  }
+
+  h2{
+    font-size: 1.2vw;
+    font-family:  "maison-neue-mono",Helvetica,Arial,sans-serif;
+    color:black;
+    font-weight: 100;
+  }
+  h3{
+    font-family: "Maison Neue", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 5vw;
+    font-weight: 300;
+  }
+  .about-container{
+    width:100%;
+    text-align: center;
+    margin-top:30vw;
+    height:50vw;
+  }
+  .title-container{
+    user-select: none;
+    position: relative;
+    margin-top:-37%;
+    z-index: 0;
+    margin-left:15%;
+  }
+  
+  
+  .page2{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin-top: 30%;
+    
+    
+  }
+
+
+
+  div.sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 12vw;
+    width:40%;
+    margin: auto;
+    z-index: 1;    
+
+  }
+  .post{
+    width:100%;
+    height:20vw;
+    background-color: #f7f7f7;
+    box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8;
+  
+  }
+
+.blog-container{
+  width:70%;
+  margin-left: auto;
+  margin-right: auto;
+  
+
+  
+}
+
+h4{
+  font-family: "Maison Neue", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 2vw;
+  font-weight: 300;
+  
+}
+.date{
+  font-family: "Maison Neue", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 2vw;
+  font-weight: 300;
+}
+
+

@@ -1,13 +1,15 @@
+
+
 {% load static %}
 <html>
     <head>
         <title>Anamoji Animation</title>
-        <link rel="stylesheet" href="{% static 'css/index1.css' %}">
+        <link rel="stylesheet" href="/static/css/index.css?{% now 'U' %}"/>
 
 
     </head>
 
-    <body style="background-color: #f3f3f3;margin:0;">
+    <body>
        
         <div class="sticky">
             <img  id="desk" src="{% static 'images/RenderEmoji2.png' %}">
@@ -190,22 +192,54 @@
             <div class="name-container">
                 <h1>Joel Wolinsky</h1>
             </div>
+            <div class="menu-options">
+                <div class="menu-option" >
+                    <h2 id='about-option'>About</h2>
+                    <div class='option-underline' id='about-line'></div>
+                </div>
+                <div class="menu-option" >
+                    <h2 id='blog-option'>Blog</h2>
+                    <div class='option-underline' id='blog-line'></div>
+                </div>
+                <div class="menu-option" >
+                    <h2 id='contact-option'>Contact</h2>
+                    <div class='option-underline' id='contact-line'></div>
+                </div>
+
+            </div>
             
         </div>
        
-        
+
+    
         
 
         <div class='title-container'>
                 <p id="title">create.</p>
         </div>
 
-        <div class='page2'>
-            <p>create2.</p>
-       
+    
+    <div class='about-container'>
+        <h3>Hey, I'm Joel</h3>
     </div>
-  
-        
+    <div class='blog-container'>
+        <h3 style='font-size: 2vw;'>Blog</h3>
+        <div class="blog-box" >
+
+        </div>
+        <div class="blog-box">
+            
+        </div>
+        <div class="blog-box">
+    
+        </div>
+        <div class="blog-box">
+            
+        </div>
+    </div>
+    
+    {% block content %}
+    {% endblock %}
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -227,34 +261,35 @@
             });
 
             function scrollDownHome(){
-                console.log("scrool down animation");
+                //console.log("scrool down animation");
                 var opacity = 1;
                 while (opacity > 0) { 
                     (function(i){
-                console.log(i);
+               // console.log(i);
                 setTimeout(function(){document.getElementById('title').style.opacity = i;document.getElementById('desk').style.opacity = i;},200*(1-i)); 
                 setTimeout(function(){document.getElementById('menu').style.opacity = 1-i;},400*(1-i));                       
-                      
                    })
                    (opacity-=0.1); 
                    
                 }
+                document.body.style.backgroundColor = 'white';
             }
 
             function scrollUpHome(){
-                console.log("scrool up animation")
+                //console.log("scrool up animation")
                 var opacity = 0;
                 while (opacity < 1) { 
                     (function(i){
-                console.log(i);
+                //console.log(i);
                 setTimeout(function(){document.getElementById('title').style.opacity = i;document.getElementById('desk').style.opacity = i;},200*(i));
                 setTimeout(function(){document.getElementById('menu').style.opacity = 1-i;},200*(i));                       
                        
                    })
                    (opacity+=0.1)  
                 }
+                document.body.style.backgroundColor = '#f3f3f3';
             }
-           window.onscroll = function() {myFunction()};
+          // window.onscroll = function() {myFunction()};
 
            
 
@@ -278,8 +313,8 @@
                     var c = "anamoji" + ab;
 
 
-                    console.log(c);
-                    console.log("old: :"+oldImg);
+                    //console.log(c);
+                    //console.log("old: :"+oldImg);
 
                     document.getElementById(c).style.zIndex = '1';
                     if(c!=oldImg){
@@ -300,7 +335,7 @@
                     var c = "anamoji" + ab;
 
 
-                    console.log(c);
+                    //console.log(c);
                     document.getElementById(c).style.zIndex = '1';
                     if(c!=oldImg){
                         document.getElementById(oldImg).style.zIndex = '0'; 
@@ -327,7 +362,7 @@
                     var c = "anamoji" + ab;
 
 
-                    console.log(c);
+                    //console.log(c);
                     document.getElementById(c).style.zIndex = '1';
                     if(c!=oldImg){
                         document.getElementById(oldImg).style.zIndex = '0'; 
@@ -336,6 +371,99 @@
 
                     //document.getElementById('anamoji').src = "{% static 'images/' %}"+c 
                 }               
+            }
+            document.getElementById("about-option").onmouseover = function() {
+                
+                var width = document.getElementById('about-option').offsetWidth;
+                console.log("width: " +width);
+
+                width = width /10;
+
+                for (x=1; x<11;x++){
+                    (function(i){
+                    setTimeout(function(){document.getElementById('about-line').style.width = i*width;},10*(i));
+                    console.log(i);
+                    })(x+=1)
+                }
+            }
+
+            document.getElementById("about-option").onmouseout = function() {
+                
+                var width = document.getElementById('about-option').offsetWidth;
+                console.log("width: " +width);
+
+                width = width /10;
+                var x = 10;
+                while (x>0){
+                    (function(i){
+                    setTimeout(function(){document.getElementById('about-line').style.width = (i*width);},10*(10-i));
+                    console.log(i);
+
+                    })(x-=1)
+                }
+            }
+            
+
+            document.getElementById("blog-option").onmouseover = function() {
+                
+                var width = document.getElementById('blog-option').offsetWidth;
+                console.log("width: " +width);
+
+                width = width /10;
+
+                for (x=1; x<11;x++){
+                    (function(i){
+                    setTimeout(function(){document.getElementById('blog-line').style.width = i*width;},10*(i));
+                    console.log(i);
+                    })(x+=1)
+                }
+            }
+
+            document.getElementById("blog-option").onmouseout = function() {
+                
+                var width = document.getElementById('blog-option').offsetWidth;
+                console.log("width: " +width);
+
+                width = width /10;
+                var x = 10;
+                while (x>0){
+                    (function(i){
+                    setTimeout(function(){document.getElementById('blog-line').style.width = (i*width);},10*(10-i));
+                    console.log(i);
+
+                    })(x-=1)
+                }
+            }
+
+            document.getElementById("contact-option").onmouseover = function() {
+                
+                var width = document.getElementById('contact-option').offsetWidth;
+                console.log("width: " +width);
+
+                width = width /10;
+
+                for (x=1; x<11;x++){
+                    (function(i){
+                    setTimeout(function(){document.getElementById('contact-line').style.width = i*width;},10*(i));
+                    console.log(i);
+                    })(x+=1)
+                }
+            }
+
+            document.getElementById("contact-option").onmouseout = function() {
+                
+                var width = document.getElementById('contact-option').offsetWidth;
+                console.log("width: " +width);
+
+                width = width /10;
+                var x = 10;
+                while (x>0){
+                    (function(i){
+                    setTimeout(function(){document.getElementById('contact-line').style.width = (i*width);},10*(10-i));
+                    console.log(i);
+
+                    })(x-=1)
+                }
             }
             </script>
     </body>
