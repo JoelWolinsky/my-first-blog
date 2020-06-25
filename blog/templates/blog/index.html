@@ -226,6 +226,30 @@
         {% block content %}
         {% endblock %}
     </div>
+
+    <div class='contact-container'>
+        <a href='https://www.linkedin.com/in/joel-wolinsky-074b09152/'>
+            <div class='contact-block' style='background-color: #0073B2;'>
+                <div class='contact-text'>Linkedin</div>
+            </div>
+         </a>
+
+        <a href='https://github.com/JoelWolinsky'>
+            <div class='contact-block' style='background-color: #312F30;'>
+                <div class='contact-text'>GitHub</div>
+            </div>
+        </a>
+        
+        <div class='contact-block' style='background-color: #DC4A3E;'>
+            <div class='contact-text' style='font-size:0.9vw;margin-top:26%;'>
+                <div id='copy-alert'>Copied to clipboard!</div>
+                <a onclick="copyToClipboard('#p1')" id='p1'>hey@joelwolinsky.com</a>
+                
+            </div>
+        </div>
+
+
+    </div>
    
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -234,10 +258,11 @@
             var scrollDown = false;
             $(window).scroll(function() {
             var wS = $(this).scrollTop();
-            
 
+         
             if(wS >50 && scrollDown == false){
                 scrollDown = true;
+                scrolled = true;
                 scrollDownHome()
             }
 
@@ -253,15 +278,15 @@
                 while (opacity > 0) { 
                     (function(i){
                 console.log(i);
-                setTimeout(function(){document.getElementById('title').style.opacity = i;document.getElementById('desk').style.opacity = i;},200*(1-i)); 
+                setTimeout(function(){document.getElementById('title').style.opacity = i;document.getElementById('desk').style.opacity = i;},400*(1-i)); 
                 setTimeout(function(){document.getElementById('menu').style.opacity = 1-i;},400*(1-i));                       
                    })
                    (opacity-=0.1); 
                    
                 }
-                document.body.style.backgroundColor = 'white';
-                document.getElementById('desk').style.visibility = 'hidden';
-                document.getElementById('desk-container').style.zIndex = -1;
+                
+                setTimeout(function(){document.body.style.backgroundColor = 'white';},400);
+                setTimeout(function(){document.getElementById('desk').style.visibility = 'hidden';document.getElementById('desk-container').style.zIndex = -1;},400);
 
                 //setTimeout(function(){document.getElementById('desk').style.visibility = 'hidden';},500);                       
 
@@ -367,6 +392,18 @@
                     //document.getElementById('anamoji').src = "{% static 'images/' %}"+c 
                 }               
             }
+            
+            function copyToClipboard(element) {
+                var $temp = $("<input>");
+                $("body").append($temp);
+                $temp.val($(element).text()).select();
+                document.execCommand("copy");
+                $temp.remove();
+                document.getElementById('copy-alert').style.opacity = '1'; 
+                setTimeout(function(){document.getElementById('copy-alert').style.opacity = '0'; ;},1500);
+
+
+                }
             
             </script>
     </body>

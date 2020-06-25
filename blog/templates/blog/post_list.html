@@ -16,6 +16,7 @@
         {% block content %}
             {% for post in posts %}
            
+
                 <div class="post">
                     <div class='post-img'>
                         <img src="{{ post.cover.url}}" alt="{{ post.title }}" style='width: 100%;'>
@@ -26,7 +27,7 @@
 
                     <h4><a class ='left' href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h4>
 
-                    <h5>{{ post.text|linebreaksbr }}</h5>
+                    <h5>{{ post.first_para|linebreaksbr }}</h5>
                 </div>
             
                     
