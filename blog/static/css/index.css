@@ -3,7 +3,7 @@ html {
 }
 
 body{
-  background-color: #f3f3f3;
+  background-color: white;
 }
 
 .circular--portrait {
@@ -39,7 +39,7 @@ body{
     padding-top: 1vw;
     width:100%; 
     height:4vw;
-    opacity: 0;
+    opacity: 1;
    
     
   }
@@ -47,6 +47,7 @@ body{
     margin-left:1vw;
     width:10%;
     float:left;
+    z-index: 100;
 
   }
 
@@ -86,8 +87,9 @@ body{
   h1{
     font-size: 1.2vw;
     font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     color:black;
+    user-select: none;
   }
 
   h2{
@@ -101,10 +103,10 @@ body{
     font-size: 5vw;
     font-weight: 300;
   }
-  #about-container{
+  #about{
     width:100%;
     text-align: center;
-    margin-top:30vw;
+    margin-top:32vw;
     height:50vw;
   }
   .title-container{
@@ -130,54 +132,19 @@ body{
   div.sticky{
     position: -webkit-sticky;
     position: sticky;
-    top: 12vw;
+    top: 10vw;
     width:40%;
     margin-left: 27%;
-    
-    z-index: 1;   
+    opacity: 0;
+    z-index: 0;   
     user-select: none;
+    visibility: hidden;
 
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 2s; /* Firefox < 16 */
-     -ms-animation: fadein 2s; /* Internet Explorer */
-      -o-animation: fadein 2s; /* Opera < 12.1 */
-         animation: fadein 2s;
-    
   }
-
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
   
 
 
-#blog-container{
+#blog{
   width:45%;
   margin-left: auto;
   margin-right: auto; 
@@ -252,7 +219,7 @@ h5{
 }
 
 
-.contact-container{
+#contact{
   width:35%;
   height:20vw;
   margin-left: auto;
