@@ -155,9 +155,12 @@ body{
   margin-left: auto;
   margin-right: auto; 
 }
-.post{
+a.post{
   width:100%;
-  margin-bottom: 7vw;
+  margin-bottom: 4vw;
+  text-decoration: none;
+  display: inline-block
+
 
 }
 
@@ -175,20 +178,22 @@ h4{
   margin-top:1vw;
   margin-bottom:1vw;
   color: black;
+  width: auto;
   
 }
-a.left{
+div.left{
   color: black;
   text-decoration: none;
   position: relative;
+  display: inline-block
 }
 
-a.left:before {
+div.left:before {
   content: "";
   position: absolute;
   width: 0;
   height: 2px;
-  bottom: 0;
+  bottom: 1vw;
   left: 0;
   background-color: black;
   visibility: hidden;
@@ -197,7 +202,7 @@ a.left:before {
 }
 
 
-a.left:hover:before {
+a.post:hover > div.left:before {
   visibility: visible;
   width: 100%;
   color:red;
