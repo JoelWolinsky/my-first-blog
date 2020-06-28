@@ -14,6 +14,7 @@
         <div class="sticky" id='desk-container'>
             <img  id="home" src="{% static 'images/RenderEmoji2.png' %}"  >
         </div>
+        
         <div class='menu' id="menu" >
             
             <a href='#home'>
@@ -217,6 +218,7 @@
 
         <div class='title-container'>
                 <p id="title">create.</p>
+                
         </div>
 
     
@@ -299,7 +301,7 @@
                 while (opacity > 0) { 
                     (function(i){
                 console.log(i);
-                setTimeout(function(){document.getElementById('title').style.opacity = i;document.getElementById('desk-container').style.opacity = i;},400*(1-i)); 
+                setTimeout(function(){document.getElementById('title').style.opacity = i;document.getElementById('desk-container').style.opacity = i;document.getElementById('arrow').style.opacity = i;},400*(1-i)); 
                 setTimeout(function(){document.getElementById('menu').style.opacity = 1-i;},400*(1-i));                       
                    })
                    (opacity-=0.1); 
@@ -320,7 +322,7 @@
                 while (opacity < 1) { 
                     (function(i){
                 //console.log(i);
-                setTimeout(function(){document.getElementById('title').style.opacity = i;document.getElementById('desk-container').style.opacity = i;},200*(i));
+                setTimeout(function(){document.getElementById('title').style.opacity = i;document.getElementById('arrow').style.opacity = i;document.getElementById('desk-container').style.opacity = i;},200*(i));
                 setTimeout(function(){document.getElementById('menu').style.opacity = 1-i;},200*(i));                       
                        
                    })
